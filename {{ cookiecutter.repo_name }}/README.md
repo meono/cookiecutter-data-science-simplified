@@ -6,34 +6,54 @@
 Project Organization
 ------------
     ├── LICENSE
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── TODO.md            <- A helpful TODO list for project related tasks.
-    ├── .env               <- contains usernames/passwords to access database, etc (file is ignored with .gitignore)
-    ├── .env_template      <- template to make your own .env file
-    ├── certificates       <- eg. ssl certificate needed for sql access (contents ignored with .gitignore)
+    ├── README.md                 <- The top-level README for developers using this project.
+    ├── TODO.md                   <- A helpful TODO list for project related tasks.
+    ├── .env                      <- contains usernames/passwords to access database, etc (file is ignored with .gitignore)
+    ├── .env_template             <- template to make your own .env file
+    ├── certificates              <- eg. ssl certificate needed for sql access (contents ignored with .gitignore)
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── external              <- Data from third party sources.
+    │   ├── interim               <- Intermediate data that has been transformed.
+    │   ├── processed             <- The final, canonical data sets for modeling.
+    │   └── raw                   <- The original, immutable data dump.
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         and a short `_` delimited description, e.g.
-    │                         `01_initial_data_exploration`.
+    ├── notebooks                 <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                                and a short `_` delimited description, e.g.
+    │                                `01_initial_data_exploration`.
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
+    ├── reports                   <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └── figures               <- Generated graphics and figures to be used in reporting
     │
-    ├── environment.yml    <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `conda env export --no-builds -n {{cookiecutter.project_name}} > environment.yml`
+    ├── environment.yml           <- The requirements file for reproducing the analysis environment, e.g.
+    │                                generated with `conda env export --no-builds -n {{cookiecutter.project_name}} > environment.yml`.
+    ├── environment_simple.yml    <- A simpler version of the environment with only the packages directly 
+    │                                installed. Ideally generated through `conda env export --from-history -f environment_simple.yml`.
     │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   ├── data           <- Scripts to download or generate data
-    │   ├── utilities      <- Scripts or modules for miscellaneous functions
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    ├── src                       <- Source code for use in this project.
+    │   ├── __init__.py           <- Makes src a Python module
+    │   ├── data                  <- Scripts to download or generate data
+    │   ├── utilities             <- Scripts or modules for miscellaneous functions
+    │   └── visualization         <- Scripts to create exploratory and results oriented visualizations
     │
     └── Anything else?
 --------
+
+# Data dumps:
+
+Any data processed/generated outside this repository (and prone to change) should go under `data/external`.
+
+
+# Sources of external files:
+
+
+
+# Requirements:
+
+`environment_simple.yml` file lists all packages used/needed in scripts and notebooks. This environment can be created by conda using: 
+
+```
+conda env create -f environment_simple.yml 
+```
+
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
