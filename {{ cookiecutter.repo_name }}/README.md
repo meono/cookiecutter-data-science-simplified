@@ -38,13 +38,26 @@ Project Organization
     └── Anything else?
 --------
 
-# Data dumps:
+# Contributing
 
-Any data processed/generated outside this repository (and prone to change) should go under `data/external`.
+Some guidelines should be observed consistently across all that contribute to this project, so that this simplified version of a data science structure is still viable.
 
+* Make sure your notebook works in the repository. 
+
+    * If you refer to files in notebooks/scripts, they have to exist in the repository - and not just your own computer. Ideally use the dotenv path system to refer to files in the repository. 
+    * Your scripts will need certain libraries to run. Make sure they are listed in the `environment_simple.yml` file. Some requirements are tricky to resolve due to version conflicts. A full environment export can be put on `environment.yml`. Make sure to built up on the previously established environment and/or test/update the rest of the notebooks/scripts accordingly.
+
+* Keep the formatting standard.
+    * Use the black formatter to format your code.
+
+* Keep data in the structure presented.
+    * Raw data should always be traceable to sources.
+    * Interim data need not be well-tracked.  (#TODO: Consider adding it to gitignore?)
+    * Processed data should be easily regeneratable from raw data through scripts or notebooks.
 
 # Sources of external files:
 
+Any data processed/generated outside this repository (and prone to change) should go under `data/external`.
 
 
 # Requirements:
