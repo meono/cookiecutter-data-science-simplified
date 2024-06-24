@@ -57,7 +57,7 @@ Some guidelines should be observed consistently across all that contribute to th
 
 # Sources of external files:
 
-Any data processed/generated outside this repository (and prone to change) should go under `data/external`.
+Any data processed/generated outside this repository (and prone to change) should go under `data/external`. When new data file is added to external, the source should be catalogued here.
 
 
 # Requirements:
